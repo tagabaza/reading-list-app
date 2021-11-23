@@ -1,5 +1,7 @@
 # Reading List Application
-
+<h1 align="left">
+  Boss
+</h1>
 A simple web application built using **REACT** which holds a users reading list of books. The application features the use of Contexts and Hooks to pass data and manipulate state, in addition to the use of a Reducer to centralise the methods that change state into a single function.
 
 
