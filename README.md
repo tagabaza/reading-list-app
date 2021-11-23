@@ -58,12 +58,6 @@ export const bookReducer = (state, action) => {
 };
 ```
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
 ### Potential Future Features
 
 - Utilizing local storage within the project so that when the users refreshes the page, any books currently on the list remain rather than returning to the default empty list.
