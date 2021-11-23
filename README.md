@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Reading List Application
+
+A simple web application which creates a users reading list of books. Built using **REACT** Features controlled forms, Hooks and is served by a Context API global state management solution. Prints out a copy of the user's entered information (though with minimal styling). There's lots of solutions out there with endless customisation, the idea is to create a clean CV quickly and with little fuss.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
