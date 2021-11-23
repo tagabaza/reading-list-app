@@ -64,13 +64,9 @@ export const bookReducer = (state, action) => {
 }
 ```
 
-### Continued development
+### Potential Future Features
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-## Deployment
-
-Deployed with [github pages](https://pages.github.com/).
+- Utilizing local storage within the project so that when the users refreshes the page, any books currently on the list remain rather than returning to the default empty list.
 
 ## Get started
 
@@ -78,10 +74,10 @@ From your command line, first clone this repo:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/rgneville/cv-app
+$ git clone https://github.com/tagabaza/reading-list-app
 
 # Go into the repository
-$ cd cv-app
+$ cd reading-list-app
 
 # Remove current origin repository
 $ git remote remove origin
@@ -94,14 +90,6 @@ Using NPM:
 ```bash
 # Install dependencies
 $ npm install
-
-# Start development server
-$ npm start
-```
-
-You should now have a development server running in your default browser.
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -129,3 +117,4 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
