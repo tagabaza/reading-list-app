@@ -5,7 +5,7 @@
 A simple web application built using REACT which holds a users reading list of books. 
 </p>
 <div>
-  <img src="./src/images/screenshot1.png"/>
+  <img src="./src/images/screenshot2.png"/>
 </div>
 
 ## My process
@@ -21,28 +21,47 @@ A simple web application built using REACT which holds a users reading list of b
 
 ### What I learned
 
-Can see how much cleaner code is with functional based components, shorter and simpler, easier to develop, maintain and test also less dealings with the "this" confusion from class based components.
+I can see how much cleaner code is with functional based components as opposed to class based components. Functional components are shorter and simpler which makes them easier to develop and test, especially as there is no dealings with the 'this' keyword which I believe could be confusing in larger projects.
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Then the use of Context API and Hooks makes doing away class based components more valid as the sharing and changing of state in a componenet tree is simpler when you don't have to pass down props at every level.
 
-The application features the use of Contexts and Hooks to pass data and manipulate state, in addition to the use of a Reducer to centralise the methods that change state into a single function.
+```js
+import React, { useContext, useState } from "react";
+import { BookContext } from "../contexts/BookContext";
 
-To see how you can add code snippets, see below:
+const NewBookForm = () => {
+  const { dispatch } = useContext(BookContext);
+  const [title, setTitle] = useState("");
+  const [author, setAuthor] = useState("");
+};
+```
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+Although a Reducer to centralise the methods that change state into a single function was not really needed in a project like this, I can certainly see how beneficial they can be in a larger projects when they allow you to manage all state changes in one place.
+
+```js
+export const bookReducer = (state, action) => {
+  switch (action.type) {
+    case "ADD_BOOK":
+      return [
+        ...state,
+        {
+          title: action.book.title,
+          author: action.book.author,
+          id: uuidv4(),
+        },
+      ];
+    case "REMOVE_BOOK":
+      return state.filter((book) => book.id !== action.id);
+    default:
+      return state;
+  }
+};
 ```
 
 ```css
 .proud-of-this-css {
   color: papayawhip;
 }
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
 ```
 
 ### Continued development
